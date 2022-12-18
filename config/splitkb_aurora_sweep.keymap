@@ -62,7 +62,7 @@
 		&kp ESC  &trans &trans  &trans  &trans    			        &trans  &trans &kp PG_DN &kp PG_UP &kp CAPS
 		&sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT 			&kp PG_DN &kp LEFT  &kp DOWN  &kp UP &kp RIGHT
 		&kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)          &kp LC(BSPC) &kp HOME &trans &trans  &kp END
-					                        &trans &kp LCTRL    &kp ENTER  &mo FNC 
+					                        &trans &kp LCTRL    &kp RET  &mo 2 
 		>;
 		};
 		
