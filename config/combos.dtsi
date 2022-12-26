@@ -43,13 +43,12 @@ compatible = "zmk,combos";
 ╰────────╮30 31│ │32 33╭────────╯
          ╰─────╯ ╰─────╯         */
 
-COMBO(tab, &kp TAB, 1 2)
-COMBO(ctrl, &sk LCTL, 21 22)
-COMBO(cmd, &sk LCMD, 30 31)
+COMBO(ctrl, &kp ESC, 1 2)
+COMBO(tab, &kp TAB, 21 22)
 
 COMBO_LONG(capsword, &caps_word, 14 15)
 LAYER_COMBO(lock, &tog LCK, 20 29 30 33, NORMAL_LAYERS LOCK_LAYER)
 
 COMBO(del, &kp DEL, 7 8)
 COMBO(backspace, &kp BSPC, 27 28)
-COMBO(opt, &sk LALT, 32 33)
+COMBO(opt, &sk LCMD, 32 33)
