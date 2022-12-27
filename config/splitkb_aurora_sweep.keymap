@@ -83,14 +83,14 @@ number_layer {
 // --------------------------------------------------------------------
 // | [{  |  7& |  8* |  9( |  ]} | 		|     |   |   |  -_  |  /  |     |
 // | ;:  |  4$ |  5% |  6^ |  =+ | 		|     |+Shift+|+Ctrl+|+Opt+|+GUI+|
-// | `~  |  1! |  2@ |  3# |  \| | 		|     |  +    |  ?   |  !  |     |
-//                   |  0) | SPC | 		| RET |_NUM_|
+// | 0   |  1! |  2@ |  3# |  \| | 		|     |  +    |  ?   |  !  |     |
+//                   | NAV | SPC | 		| RET |_NUM_|
 
 bindings = <
    &kp LBKT   &kp N7 	&kp N8 	&kp N9 	&kp RBKT 		&none 	&kp PIPE 	&kp MINUS 	&kp FSLH    &none
    &kp SEMI   &kp N4 	&kp N5 	&kp N6 	&kp EQUAL 		&none 	&skq RSHFT  &skq RCTRL 	&skq RALT   &skq RGUI  
-   &kp GRAVE  &kp N1 	&kp N2 	&kp N3 	&kp BSLH 		&none 	&kp PLUS 	&kp QMARK  	&kp EXCL    &none
-                 				&kp N0  &kp SPACE   &kp RET &trans
+   &kp N0     &kp N1 	&kp N2 	&kp N3 	&kp BSLH 		&none 	&kp PLUS 	&kp QMARK  	&kp EXCL    &none
+                 				&mo NAV  &kp SPACE   &kp RET &trans
 >;
 };
 

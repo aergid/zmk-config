@@ -38,7 +38,6 @@ compatible = "zmk,combos";
 COMBO(esc, &kp ESC, 1 2)
 COMBO(tab, &kp TAB, 21 22)
 COMBO(shift, &sk LSHFT, 30 31)
-COMBO_LONG(fun, &mo NAV, 30 31)
 
 COMBO_LONG(capsword, &caps_word, 14 15)
 LAYER_COMBO(lock, &tog LCK, 20 29 30 33, NORMAL_LAYERS LCK)
