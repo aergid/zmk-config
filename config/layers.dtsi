@@ -1,0 +1,8 @@
+#define NORMAL_LAYERS 0 1 2 3 4
+
+#define CMK 0
+#define SYM 1
+#define NUM 2
+#define NAV 3
+#define FUN 4
+#define LCK 5

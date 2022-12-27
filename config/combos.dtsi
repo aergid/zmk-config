@@ -1,17 +1,9 @@
 // taken from rayduck's pnohty
 
+#include "layers.dtsi"
+
 compatible = "zmk,combos";
 #define LONG_TIMEOUT_MS 100
-#define NORMAL_LAYERS 0 1 2 3 4
-
-// #define CMK 0
-// #define NUM 1
-// #define NAV 2
-// #define FUN 3
-// #define DAN 4
-// #define LCK 5
-
-#define LOCK_LAYER 5
 
 #define COMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
@@ -46,9 +38,10 @@ compatible = "zmk,combos";
 COMBO(esc, &kp ESC, 1 2)
 COMBO(tab, &kp TAB, 21 22)
 COMBO(shift, &sk LSHFT, 30 31)
+COMBO_LONG(fun, &mo NAV, 30 31)
 
 COMBO_LONG(capsword, &caps_word, 14 15)
-LAYER_COMBO(lock, &tog LCK, 20 29 30 33, NORMAL_LAYERS LOCK_LAYER)
+LAYER_COMBO(lock, &tog LCK, 20 29 30 33, NORMAL_LAYERS LCK)
 
 COMBO(del, &kp DEL, 7 8)
 COMBO(backspace, &kp BSPC, 27 28)
