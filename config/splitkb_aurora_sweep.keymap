@@ -92,31 +92,31 @@ keymap {
 compatible = "zmk,keymap";
 colemak_layer {
 // -----------------------------------------------------------------
-// |  Q  |  W  |  F  |  P  |  B  |	 |  J  |  L  |  U  |  Y  |  ;  |
+// |  Q  |  W  |  F  |  P  |  B  |	 |  J  |  L  |  U  |  Y  |  '" |
 // |  A  |  R  |  S  |  T  |  G  |	 |  M  |  N  |  E  |  I  |  O  |
-// |  Z  |  X  |  C  |  D  |  V  |	 |  K  |  H  |  ,  |  .  |-FUN-|
-//                   |-SYM-| SPC |	 | RET |-NUM-|
+// |  Z  |  X  |  C  |  D  |  V  |	 |  K  |  H  |  ,  |  .  | ;:  |
+//                   |-NAV-| SPC |	 | RET |-SYM-|
 
 bindings = <
-&kp Q 	&kp W 	&kp F 	&kp P 	&kp B 		&kp J 	&kp L   &kp U     &kp Y   	&kp SEMI
+&kp Q 	&kp W 	&kp F 	&kp P 	&kp B 		&kp J 	&kp L   &kp U     &kp Y   	&kp APOS
 &lh_pht LGUI A   &lh_pht LCTRL R   &lh_pht LALT S   &lh_pht LSHFT T  &kp G    &kp M   &rh_pht RSHFT N   &rh_pht RALT E   &rh_pht RCTRL I  &rh_pht RGUI O
-&kp Z 	&kp X 	&kp C 	&kp D 	&kp V 		&kp K 	&kp H   &kp COMMA &kp DOT 	&mo FUN
-                   		&lt SYM TAB &kp SPACE 	&kp RET &lt NUM BSPC
+&kp Z 	&kp X 	&kp C 	&kp D 	&kp V 		&kp K 	&kp H   &kp COMMA &kp DOT 	&kp SEMI
+                   		&lt NAV TAB &kp SPACE 	&kp RET &lt SYM BSPC
 >;
 };
 
 symbol_layer {
 // --------------------------------------------------------------------
-// |     |  \  |  %  |  $  |     | 		|     |  ^  |  {  |  }  |     |
-// |  *  |  (  |  )  |  :  |     | 		|     |  "  |  [  |  ]  |  ;  |
-// |     |  `  |  @  |  &  |     | 		|     |  #  |  <  |  >  |-FUN-|
-//                   |_SYM_| SPC | 		| RET | ESC |
+// | ESC |  [  |  {  |  (  | ~   | 		|  ^  |  )    |  }   |  ]  |  `  |
+// |  -  |  *  |  =  |  _  |  $  | 		|  #  |+Shift+|+Ctrl+|+Opt+|+GUI+|
+// |  +  |  |  |  @  |  /  |  %  | 		|     |  \    |  &   |  ?  | !   |
+//                   |-NAV-| SPC | 		| RET |_SYM_|
                         
 bindings = <
-   &none  	&kp BSLH 	&kp PRCNT 	&kp DLLR  	&none 		&none 	&kp CARET 	&kp LBRC 	&kp RBRC 	&none
-   &kp STAR &kp LPAR 	&kp RPAR  	&kp COLON 	&none 		&none 	&kp DQT   	&kp LBKT 	&kp RBKT 	&kp SEMI
-   &mo FUN  &kp GRAVE   &kp AT  	&kp AMPS  	&none 		&none 	&kp HASH 	&kp LT   	&kp GT   	&kp DEL
-                             		&trans 		&kp SPACE 	&kp RET &kp BSPC
+    &kp ESC     &kp LBKT    &kp LBRC    &kp LPAR    &kp TILDE       &kp CARET   &kp RPAR    &kp RBRC    &kp RBKT    &kp GRAVE
+    &kp MINS    &kp STAR    &kp EQUA    &kp UNDER   &kp DOLLAR      &kp HASH    &sk RSHFT   &sk RCTRL 	&sk RALT    &sk RGUI
+    &kp PLUS    &kp PIPE    &kp AT      &kp FSLH    &kp PERCENT     &none       &kp BSLH    &kp AMPS    &kp QMARK   &kp EXCL
+                             		    &trans 		&kp SPACE 	    &kp RET     &trans
 >;
 };
 
@@ -129,7 +129,7 @@ number_layer {
 
 bindings = <
    &kp LBKT   &kp N7 	&kp N8 	&kp N9 	&kp RBKT 		&none 	&kp PIPE 	&kp MINUS 	&kp FSLH    &none
-   &kp SEMI   &kp N4 	&kp N5 	&kp N6 	&kp EQUAL 		&none 	&skq RSHFT  &skq RCTRL 	&skq RALT   &skq RGUI  
+   &kp SEMI   &kp N4 	&kp N5 	&kp N6 	&kp EQUAL 		&none 	&sk RSHFT   &sk RCTRL 	&sk RALT    &sk RGUI  
    &kp N0     &kp N1 	&kp N2 	&kp N3 	&kp BSLH 		&none 	&kp PLUS 	&kp QMARK  	&kp EXCL    &none
                  				&mo NAV  &kp SPACE   &kp RET &trans
 >;
@@ -137,16 +137,16 @@ bindings = <
 
 nav_layer {
 // --------------------------------------------------------------------
-// |     |     |     |     |     | 		|     |     |     |     |     |
-// |     |     |     |     |     | 		| LFT | DWN | U P |RIGHT|_NAV_|
-// |     |     |     |     |     | 		| HOM |PG_DN|PG_UP| END |     |
-//                   |     | SPC | 		| RET |_NUM_|
+// |     | back| fwd  | play|volup| 		|     |     |     |     |     |
+// |+GUI+|+Opt+|+Ctrl+|+Sft+|voldn| 		| LFT | DWN | UP  |RIGHT|     |
+// |     |     |      |     |     | 		| HOM |PG_DN|PG_UP| END |     |
+//                    |_NAV_| SPC | 		| RET |_NUM_|
 
 bindings = <
-   &none 	&none 	&none 	&none 	&none 		&none    	&none     	&none     	&none     	&none 
-   &none 	&none 	&none 	&none 	&none 		&kp LEFT 	&kp DOWN  	&kp UP    	&kp RIGHT 	&trans  
-   &none 	&none 	&none 	&none 	&none 		&kp HOME 	&kp PG_DN 	&kp PG_UP 	&kp END   	&none 
-                            &kp TAB   &trans 		&trans 		&kp BSPC
+   &none 	&none     &none 	  &none 	 &none 		    &none    	&none     	&none     	&none     	&none 
+   &sk LGUI &sk LALT  &sk LCTRL   &sk LSHFT  &none          &kp LEFT    &kp DOWN  	&kp UP    	&kp LIGHT 	&none  
+   &none 	&none 	  &none 	  &none 	 &none 		    &kp HOME 	&kp PG_DN 	&kp PG_UP 	&kp END   	&none 
+                                  &trans   &kp SPC 		&trans 		&kp BSPC
 >;
 };
 
@@ -164,24 +164,6 @@ bindings = <
                          	&kp TAB 	&trans 			&trans 		  &kp BSPC 
 >;
 };
-
-//danger_layer {
-// -----------------------------------------------------------------
-// |     |     |     |     |     | |BTCLR| BLE | USB |RESET|     |
-// |     |     |     |     |     | |     |     |     |     |BOOTL|
-// |_!!!_|     |     |     |     | |     |     |     |     |_FUN_|
-//                   |     |     | |     |     |
-
-// impactful buttons
-// Bluetooth clear, reset, chaning BLE/USB preference, bootloader
-
-// bindings = <
-// &none &none &none &none &none &bt BT_CLR  &out OUT_BLE &out OUT_USB &reset &none
-// &none &none &none &none &none &none &none &none &none &bootloader
-// &trans &none &none &none &none &none &none &none &none &trans
-// &none &none &none &none
-// >;
-// };
 
 lock_layer {
 // only way out is the lock combo
