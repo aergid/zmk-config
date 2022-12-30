@@ -40,7 +40,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <300>;    // <---[[moderate duration]]
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -51,13 +51,12 @@
             label = "LEFT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            tapping-term-ms = <200>;                        // <---[[produces tap if held longer than tapping-term-ms]]
             quick-tap-ms = <300>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <    // <---[[right-hand keys and thumbs]]
+            hold-trigger-key-positions = <    // <---[[right-hand keys]]
                 5 6 7 8 9 10
                 15 16 17 18 19
-                30 31 32 33
                 >;
         };
 
@@ -66,14 +65,13 @@
             label = "RIGHT_POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
-            quick-tap-ms = <200>;
+            tapping-term-ms = <200>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            quick-tap-ms = <300>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <    // <---[[left-hand keys and thumbs]]
+            hold-trigger-key-positions = <    // <---[[left-hand keys]]
                  0  1  2  3  4
                 10 11 12 13 14
                 20 21 22 23 24
-                30 31 32 33
                 >;
         };
     };
@@ -110,43 +108,43 @@ symbol_layer {
 // | ESC |  [  |  {  |  (  | ~   | 		|  ^  |  )    |  }   |  ]  |  `  |
 // |  -  |  *  |  =  |  _  |  $  | 		|  #  |+Shift+|+Ctrl+|+Opt+|+GUI+|
 // |  +  |  |  |  @  |  /  |  %  | 		|     |  \    |  &   |  ?  | !   |
-//                   |-NAV-| SPC | 		| RET |_SYM_|
+//                   |-NUM-| SPC | 		| RET |_SYM_|
                         
 bindings = <
     &kp ESC     &kp LBKT    &kp LBRC    &kp LPAR    &kp TILDE       &kp CARET   &kp RPAR    &kp RBRC    &kp RBKT    &kp GRAVE
     &kp MINUS   &kp STAR    &kp EQUAL   &kp UNDER   &kp DOLLAR      &kp HASH    &sk RSHFT   &sk RCTRL 	&sk RALT    &sk RGUI
     &kp PLUS    &kp PIPE    &kp AT      &kp FSLH    &kp PERCENT     &none       &kp BSLH    &kp AMPS    &kp QMARK   &kp EXCL
-                             		    &trans 		&kp SPACE 	    &kp RET     &trans
+                             		    &mo NUM 	&kp SPACE 	    &kp RET     &trans
 >;
 };
 
 number_layer {
 // --------------------------------------------------------------------
-// | [{  |  7& |  8* |  9( |  ]} | 		|     |   |   |  -_  |  /  |     |
-// | ;:  |  4$ |  5% |  6^ |  =+ | 		|     |+Shift+|+Ctrl+|+Opt+|+GUI+|
-// | 0   |  1! |  2@ |  3# |  \| | 		|     |  +    |  ?   |  !  |     |
-//                   | NAV | SPC | 		| RET |_NUM_|
+// | 1   |  2  |  3  |  4  |  5  | 		|   6 |   7   |  8   |  9  |  0  |
+// |+GUI+|+Opt+|+Ctl+|+Sft+| F11 | 		|  F12|+Shift+|+Ctrl+|+Opt+|+GUI+|
+// | F1  |  F2 |  F3 |  F4 |  F5 | 		|  F6 |  F7   |  F8  |  F9 | f10 |
+//                   |_NUM_| SPC | 		| RET |_NUM_|
 
 bindings = <
-   &kp LBKT   &kp N7 	&kp N8 	&kp N9 	&kp RBKT 		&none 	&kp PIPE 	&kp MINUS 	&kp FSLH    &none
-   &kp SEMI   &kp N4 	&kp N5 	&kp N6 	&kp EQUAL 		&none 	&sk RSHFT   &sk RCTRL 	&sk RALT    &sk RGUI  
-   &kp N0     &kp N1 	&kp N2 	&kp N3 	&kp BSLH 		&none 	&kp PLUS 	&kp QMARK  	&kp EXCL    &none
-                 				&mo NAV  &kp SPACE   &kp RET &trans
+   &kp N1   &kp N2 	 &kp N3 	&kp N4 	&kp N5 		    &kp N6 	  &kp N7 	   &kp N8 	    &kp N9      &kp N0
+   &sk LGUI &sk LALT &sk LCTRL &sk LSHFT &kp F11 		&kp F12   &sk RSHFT    &sk RCTRL 	&sk RALT    &sk RGUI  
+   &kp F1   &kp F2   &kp F3 	&kp F4 	&kp F5 		    &kp F6 	  &kp F7 	   &kp F8  	    &kp F9      &kp F10
+                 				&trans  &kp SPACE       &kp RET &trans
 >;
 };
 
 nav_layer {
 // --------------------------------------------------------------------
-// |     | back| fwd  | play|volup| 		|     |     |     |     |     |
-// |+GUI+|+Opt+|+Ctrl+|+Sft+|voldn| 		| LFT | DWN | UP  |RIGHT|     |
-// |     |     |      |     |     | 		| HOM |PG_DN|PG_UP| END |     |
+// |     | back| fwd  | play|volup| 		|     |     | HOM | END |     |
+// |+GUI+|+Opt+|+Ctrl+|+Sft+|voldn| 		|     | LFT | DWN | UP  |RIGHT|
+// |     |     |      |     |     | 		|     |     |PG_DN|PG_UP|     |
 //                    |_NAV_| SPC | 		| RET |_NUM_|
 
 bindings = <
-   &none 	&none     &none 	  &none 	 &none 		    &none    	&none     	&none     	&none     	&none 
-   &sk LGUI &sk LALT  &sk LCTRL   &sk LSHFT  &none          &kp LEFT    &kp DOWN  	&kp UP    	&kp RIGHT 	&none  
-   &none 	&none 	  &none 	  &none 	 &none 		    &kp HOME 	&kp PG_DN 	&kp PG_UP 	&kp END   	&none 
-                                  &trans   &kp SPC 		&trans 		&kp BSPC
+   &none 	&none     &none 	  &none 	 &none 		    &none    	&none     	&kp HOME    &kp END     &none 
+   &sk LGUI &sk LALT  &sk LCTRL   &sk LSHFT  &none          &none       &kp LEFT    &kp DOWN  	&kp UP    	&kp RIGHT  
+   &none 	&none 	  &none 	  &none 	 &none 		    &none       &none    	&kp PG_DN 	&kp PG_UP 	&none 
+                                  &trans     &kp SPC 		&kp RET 	&trans
 >;
 };
 
