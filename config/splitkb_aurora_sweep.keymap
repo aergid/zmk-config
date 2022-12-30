@@ -102,7 +102,7 @@ bindings = <
 &kp Q 	&kp W 	&kp F 	&kp P 	&kp B 		&kp J 	&kp L   &kp U     &kp Y   	&kp APOS
 &lh_pht LGUI A   &lh_pht LCTRL R   &lh_pht LALT S   &lh_pht LSHFT T  &kp G    &kp M   &rh_pht RSHFT N   &rh_pht RALT E   &rh_pht RCTRL I  &rh_pht RGUI O
 &kp Z 	&kp X 	&kp C 	&kp D 	&kp V 		&kp K 	&kp H   &kp COMMA &kp DOT 	&kp SEMI
-                   		&lt NAV TAB &kp SPACE 	&kp RET &lt SYM BSPC
+                   		&lt NAV TAB &lt FUN SPACE 	    &lt NUM RET   &lt SYM BSPC
 >;
 };
 
@@ -110,14 +110,14 @@ symbol_layer {
 // --------------------------------------------------------------------
 // | ESC |  [  |  {  |  (  | ~   | 		|  ^  |  )    |  }   |  ]  |  `  |
 // |  -  |  *  |  =  |  _  |  $  | 		|  #  |+Shift+|+Ctrl+|+Opt+|+GUI+|
-// |  +  |  |  |  @  |  /  |  %  | 		|     |  \    |  &   |  ?  | !   |
-//                   |-NUM-| SPC | 		| RET |_SYM_|
+// |  +  |  |  |  @  |  \  |  %  | 		|     |  /    |  &   |  ?  | !   |
+//                   |     | SPC | 		| RET |_SYM_|
                         
 bindings = <
     &kp ESC     &kp LBKT    &kp LBRC    &kp LPAR    &kp TILDE       &kp CARET   &kp RPAR    &kp RBRC    &kp RBKT    &kp GRAVE
     &kp MINUS   &kp STAR    &kp EQUAL   &kp UNDER   &kp DOLLAR      &kp HASH    &sk RSHFT   &sk RCTRL 	&sk RALT    &sk RGUI
-    &kp PLUS    &kp PIPE    &kp AT      &kp FSLH    &kp PERCENT     &none       &kp BSLH    &kp AMPS    &kp QMARK   &kp EXCL
-                             		    &mo NUM 	&kp SPACE 	    &kp RET     &trans
+    &kp PLUS    &kp PIPE    &kp AT      &kp BSLH    &kp PERCENT     &none       &kp FSLH    &kp AMPS    &kp QMARK   &kp EXCL
+                             		    &none   	&kp SPACE 	    &kp RET     &trans
 >;
 };
 
