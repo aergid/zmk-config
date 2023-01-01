@@ -96,13 +96,13 @@ colemak_layer {
 // |  Q  |  W  |  F  |  P  |  B  |	 |  J  |  L  |  U  |  Y  |  '" |
 // |  A  |  R  |  S  |  T  |  G  |	 |  M  |  N  |  E  |  I  |  O  |
 // |  Z  |  X  |  C  |  D  |  V  |	 |  K  |  H  |  ,  |  .  | ;:  |
-//                   |-NAV-| SPC |	 | RET |-SYM-|
+//                   |-NAV-|SPC/EXT|	 |RET/SYM|NUM|
 
 bindings = <
 &kp Q 	&kp W 	&kp F 	&kp P 	&kp B 		&kp J 	&kp L   &kp U     &kp Y   	&kp APOS
 &lh_pht LGUI A   &lh_pht LCTRL R   &lh_pht LALT S   &lh_pht LSHFT T  &kp G    &kp M   &rh_pht RSHFT N   &rh_pht RALT E   &rh_pht RCTRL I  &rh_pht RGUI O
 &kp Z 	&kp X 	&kp C 	&kp D 	&kp V 		&kp K 	&kp H   &kp COMMA &kp DOT 	&kp SEMI
-                   		&lt NAV TAB &lt FUN SPACE 	    &lt NUM RET   &lt SYM BSPC
+                   		&lt NAV TAB &lt FUN SPACE 	    &lt SYM RET   &lt NUM BSPC
 >;
 };
 
@@ -117,7 +117,7 @@ bindings = <
     &kp ESC     &kp LBKT    &kp LBRC    &kp LPAR    &kp TILDE       &kp CARET   &kp RPAR    &kp RBRC    &kp RBKT    &kp GRAVE
     &kp MINUS   &kp STAR    &kp EQUAL   &kp UNDER   &kp DOLLAR      &kp HASH    &sk RSHFT   &sk RCTRL 	&sk RALT    &sk RGUI
     &kp PLUS    &kp PIPE    &kp AT      &kp BSLH    &kp PERCENT     &none       &kp FSLH    &kp AMPS    &kp QMARK   &kp EXCL
-                             		    &none   	&kp SPACE 	    &kp RET     &trans
+                             		    &kp TAB   	&kp SPACE 	    &trans      &kp BSPC
 >;
 };
 
@@ -132,7 +132,7 @@ bindings = <
    &kp N1   &kp N2 	 &kp N3 	&kp N4 	&kp N5 		    &kp N6 	  &kp N7 	   &kp N8 	    &kp N9      &kp N0
    &sk LGUI &sk LALT &sk LCTRL &sk LSHFT &kp F11 		&kp F12   &sk RSHFT    &sk RCTRL 	&sk RALT    &sk RGUI  
    &kp F1   &kp F2   &kp F3 	&kp F4 	&kp F5 		    &kp F6 	  &kp F7 	   &kp F8  	    &kp F9      &kp F10
-                 				&trans  &kp SPACE       &kp RET &trans
+                 				&kp TAB &kp SPACE       &kp RET   &trans
 >;
 };
 
@@ -147,7 +147,7 @@ bindings = <
    &none 	&none     &none 	  &none 	 &none 		    &none    	&none     	&kp HOME    &kp END     &none 
    &sk LGUI &sk LALT  &sk LCTRL   &sk LSHFT  &none          &none       &kp LEFT    &kp DOWN  	&kp UP    	&kp RIGHT  
    &none 	&none 	  &none 	  &none 	 &none 		    &none       &none    	&kp PG_DN 	&kp PG_UP 	&none 
-                                  &trans     &kp SPC 		&kp RET 	&trans
+                                  &trans     &kp SPC 		&kp RET 	&kp BSPC
 >;
 };
 
@@ -162,7 +162,7 @@ bindings = <
    &none 	&kp F6 	&kp F5 	&kp F4 	&kp F10 		&none 		  &none 		&none 		 	&none 			&none
    &kp CAPS &kp F3  &kp F2 	&kp F1 	&kp F11 		&bt BT_SEL 2  &kp K_MUTE 	&kp C_VOL_DN 	&kp C_VOL_UP 	&none
    &none 	&kp F9 	&kp F8 	&kp F7 	&kp F12 		&bt BT_SEL 0  &bt BT_SEL 1 	&kp C_BRI_DN 	&kp C_BRI_UP 	&trans
-                         	&kp TAB 	&trans 			&trans 		  &kp BSPC 
+                         	&kp TAB 	&trans 	    &kp RET 	  &kp BSPC 
 >;
 };
 
