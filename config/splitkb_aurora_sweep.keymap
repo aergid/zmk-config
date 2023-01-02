@@ -78,7 +78,7 @@ colemak_layer {
 
 bindings = <
 &kp Q 	&kp W 	&kp F 	&kp P 	&kp B 		&kp J 	&kp L   &kp U     &kp Y   	&kp APOS
-&hm LGUI A   &hm LCTRL R   &hm LALT S   &hm LSHFT T  &kp G    &kp M   &hm RSHFT N   &hm RALT E   &hm RCTRL I  &hm RGUI O
+&hm LCTRL A   &hm LALT R   &hm LGUI S   &hm LSHFT T  &kp G    &kp M   &hm RSHFT N   &hm RGUI E   &hm RALT I  &hm RCTRL O
 &kp Z 	&kp X 	&kp C 	&kp D 	&kp V 		&kp K 	&kp H   &kp COMMA &kp DOT 	&kp SEMI
                    		&lt NAV TAB &lt FUN SPACE 	    &lt SYM RET   &lt NUM BSPC
 >;
@@ -93,7 +93,7 @@ symbol_layer {
                         
 bindings = <
     &kp ESC     &kp LBKT    &kp LBRC    &kp LPAR    &kp TILDE       &kp CARET   &kp RPAR    &kp RBRC    &kp RBKT    &kp GRAVE
-    &kp MINUS   &kp STAR    &kp EQUAL   &kp UNDER   &kp DOLLAR      &kp HASH    &sk RSHFT   &sk RCTRL 	&sk RALT    &sk RGUI
+    &kp MINUS   &kp STAR    &kp EQUAL   &kp UNDER   &kp DOLLAR      &kp HASH    &sk RSHFT   &sk RGUI 	&sk RALT    &sk RCTRL
     &kp PLUS    &kp PIPE    &kp AT      &kp BSLH    &kp PERCENT     &none       &kp FSLH    &kp AMPS    &kp QMARK   &kp EXCL
                              		    &kp TAB   	&kp SPACE 	    &trans      &kp BSPC
 >;
@@ -108,7 +108,7 @@ number_layer {
 
 bindings = <
    &kp N1   &kp N2 	 &kp N3 	&kp N4 	&kp N5 		    &kp N6 	  &kp N7 	   &kp N8 	    &kp N9      &kp N0
-   &sk LGUI &sk LALT &sk LCTRL &sk LSHFT &kp F11 		&kp F12   &sk RSHFT    &sk RCTRL 	&sk RALT    &sk RGUI  
+   &sk LCTRL &sk LALT &sk LGUI &sk LSHFT &kp F11 		&kp F12   &sk RSHFT    &sk RGUI 	&sk RALT    &sk RCTRL  
    &kp F1   &kp F2   &kp F3 	&kp F4 	&kp F5 		    &kp F6 	  &kp F7 	   &kp F8  	    &kp F9      &kp F10
                  				&kp TAB &kp SPACE       &kp RET   &trans
 >;
@@ -123,7 +123,7 @@ nav_layer {
 
 bindings = <
    &none 	&none     &none 	  &none 	 &none 		    &none    	&none     	&kp HOME    &kp END     &none 
-   &sk LGUI &sk LALT  &sk LCTRL   &sk LSHFT  &none          &none       &kp LEFT    &kp DOWN  	&kp UP    	&kp RIGHT  
+   &sk LCTRL &sk LALT  &sk LGUI   &sk LSHFT  &none          &none       &kp LEFT    &kp DOWN  	&kp UP    	&kp RIGHT  
    &none 	&none 	  &none 	  &none 	 &none 		    &none       &none    	&kp PG_DN 	&kp PG_UP 	&none 
                                   &trans     &kp SPC 		&kp RET 	&kp BSPC
 >;
