@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #include "layers.dtsi"
+#include "../zmk-nodefree-config/helper.h"
 
 &caps_word {
    continue-list = <UNDERSCORE MINUS BACKSPACE>;
@@ -137,7 +138,7 @@ fun_layer {
 //                   |     | SPC | | RET |     |
 
 bindings = <
-   &none 	&kp F6 	&kp F5 	&kp F4 	&kp F10 		&none 		  &none 		&none 		 	&none 			&none
+   &none 	&kp F6 	&kp F5 	&kp F4 	&kp F10 		&none 		  &sv_ae 	&sv_ao 		 	&sv_oe 			&none
    &kp CAPS &kp F3  &kp F2 	&kp F1 	&kp F11 		&bt BT_SEL 2  &kp K_MUTE 	&kp C_VOL_DN 	&kp C_VOL_UP 	&none
    &none 	&kp F9 	&kp F8 	&kp F7 	&kp F12 		&bt BT_SEL 0  &bt BT_SEL 1 	&kp C_BRI_DN 	&kp C_BRI_UP 	&trans
                          	&kp TAB 	&trans 	    &kp RET 	  &kp BSPC 
