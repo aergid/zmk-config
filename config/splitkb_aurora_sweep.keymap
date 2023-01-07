@@ -11,6 +11,7 @@
 
 #include "layers.dtsi"
 #include "../zmk-nodefree-config/helper.h"
+#include "../zmk-nodefree-config/international_chars/swedish.dtsi"
 
 &caps_word {
    continue-list = <UNDERSCORE MINUS BACKSPACE>;
