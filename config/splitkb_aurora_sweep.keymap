@@ -126,9 +126,9 @@ nav_layer {
 //                    |_NAV_| SPC | 		| RET |_NUM_|
 
 bindings = <
-   &none 	&none     &none 	  &none 	 &none 		    &kp INS     &kp END     &kp HOME    &none 
-   &sk LCTRL &sk LALT  &sk LGUI   &sk LSHFT  &none          &kp LEFT    &kp DOWN  	&kp UP    	&kp RIGHT  
-   &none 	&none 	  &none 	  &none 	 &none 		    &kp PSCRN   &kp PG_DN 	&kp PG_UP 	&none 
+   &none 	&none     &none 	  &none 	 &none 		    &kp INS     &kp END     &kp HOME    &none       &kp none
+   &sk LCTRL &sk LALT  &sk LGUI   &sk LSHFT  &none          &kp LEFT    &kp DOWN  	&kp UP    	&kp RIGHT   &kp none
+   &none 	&none 	  &none 	  &none 	 &none 		    &kp PSCRN   &kp PG_DN 	&kp PG_UP 	&none       &kp none
                                   &trans     &kp SPC 		&kp RET 	&kp BSPC
 >;
 };
