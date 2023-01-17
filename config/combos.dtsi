@@ -35,17 +35,18 @@ compatible = "zmk,combos";
 ╰────────╮30 31│ │32 33╭────────╯
          ╰─────╯ ╰─────╯         */
 
-COMBO(lshft, &kp LSHFT, 1 2)
-COMBO(lalt, &kp LALT, 2 3)
 COMBO(lctrl, &kp LCTRL, 21 22)
-COMBO(lcmd, &sk LGUI, 22 23)
+COMBO(lalt, &kp LALT, 22 23)
+COMBO(lcmd, &sk LGUI, 1 2)
+COMBO(lshft, &kp LSHFT, 2 3)
 COMBO(del, &kp DEL, 30 31)
 
 COMBO_LONG(capsword, &caps_word, 14 15)
+COMBO_LONG(esc, &kp ESC, 31 32)
 LAYER_COMBO(lock, &tog LCK, 20 29 30 33, NORMAL_LAYERS LCK)
 
-COMBO(rshft, &kp RSHFT, 7 8)
-COMBO(ralt, &kp RALT, 6 7)
 COMBO(rctrl, &kp RCTRL, 27 28)
-COMBO(rcmd, &sk RGUI, 26 27)
+COMBO(ralt, &kp RALT, 26 27)
+COMBO(rcmd, &sk RGUI, 7 8)
+COMBO(rshft, &kp RSHFT, 6 7)
 COMBO(backspace, &kp BSPC, 32 33)
