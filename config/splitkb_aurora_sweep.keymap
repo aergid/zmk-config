@@ -28,9 +28,7 @@
 
 / {
 
-    combos {
-        #include "combos.dtsi"    
-    };
+
 
     behaviors {
         skq: sticky_key_quick_release {
@@ -41,25 +39,92 @@
             release-after-ms = <1000>;
             quick-release;
         };
+    };
 
-        bhm: balanced_homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;    // <---[[moderate duration]]
-            quick-tap-ms = <0>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-        };
+    combos {
+        compatible = "zmk,combos";
         
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+        combo_wf_gui {
+            layers = <NORMAL_LAYERS>;
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&sk LGUI>;
+        };
+        combo_fp_shift {
+            layers = <NORMAL_LAYERS>;
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&sk LSHFT>;
+        };
+        combo_xc_ctrl {
+            layers = <NORMAL_LAYERS>;
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            bindings = <&sk LCTL>;
+        };
+        combo_cd_alt {
+            layers = <NORMAL_LAYERS>;
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            bindings = <&sk LALT>;
+        };
+
+
+        combo_gm_capsword {
+            layers = <NORMAL_LAYERS>;
+            timeout-ms = <100>;
+            key-positions = <14 15>;
+            bindings = <&caps_word>;
+        };
+        combo_del {
+            layers = <NORMAL_LAYERS>;
+            timeout-ms = <50>;
+            key-positions = <30 31>;
+            bindings = <&kp DEL>;
+        };
+        combo_esc {
+            layers = <NORMAL_LAYERS>;
+            timeout-ms = <100>;
+            key-positions = <31 32>;
+            bindings = <&kp ESC>;
+        };
+        combo_bspc {
+            layers = <NORMAL_LAYERS>;
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&kp BSPC>;
+        };
+
+
+        combo_lu_shift {
+            layers = <NORMAL_LAYERS>;
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&sk RSHFT>;
+        };
+        combo_uy_gui {
+            layers = <NORMAL_LAYERS>;
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&sk RGUI>;
+        };
+        combo_comma_dot_ctrl {
+            layers = <NORMAL_LAYERS>;
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&sk RCTRL>;
+        };
+        combo_h_comma_alt {
+            layers = <NORMAL_LAYERS>;
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&sk RALT>;
+        };
+
+        combo_lock {
+            timeout-ms = <50>;
+            key-positions = <20 29 30 33>;
+            bindings = <&tog LCK>;
         };
     };
 };
