@@ -86,9 +86,9 @@ colemak_layer {
 
 symbol_layer {                
     bindings = <
-        &kp EXCL    &kp AT      &kp HASH    &kp DOLLAR  &kp PERCENT     &kp CARET   &kp AMPS    &kp LBRC    &kp RBRC    &kp DQT
+        &kp EXCL    &kp AT      &kp HASH    &kp DOLLAR  &kp PRCNT       &kp CARET   &kp AMPS    &kp LBRC    &kp RBRC    &kp DQT
         &sk LCTRL   &sk LALT    &sk LGUI    &sk LSHFT   &kp BSLH        &kp FSLH    &kp PIPE    &kp LPAR 	&kp RPAR    &kp GRAVE
-        &sv_ae 	    &sv_ao 		&sv_oe      &kp LT      &kp GT          &kp UNDER   &kp PERCENT &kp LBKT    &kp RBKT    &kp COLON
+        &sv_ae 	    &sv_ao 		&sv_oe      &kp LT      &kp GT          &kp UNDER   &kp PRCNT   &kp LBKT    &kp RBKT    &kp COLON
                                             &trans   	&trans 	        &trans      &trans
     >;
 };
@@ -97,7 +97,7 @@ number_layer {
     bindings = <
         &kp GRAVE  &kp N7  &kp N8  &kp N9 	&kp STAR 		    &kp CARET 	  &kp TILDE   &kp EXCL   &kp AT    &kp HASH
         &kp AT     &kp N4  &kp N5  &kp N6   &kp PLUS 		    &kp MINUS     &sk RSHIFT  &sk RGUI   &sk RALT  &sk RCTRL
-        &kp N0     &kp N1  &kp N2  &kp N3 	&kp FSLH 		    &kp COLON 	  &kp PERC 	  &kp LT  	 &kp GT    &kp EQUAL
+        &kp N0     &kp N1  &kp N2  &kp N3 	&kp FSLH 		    &kp COLON 	  &kp PRCNT 	  &kp LT  	 &kp GT    &kp EQUAL
                                    &kp DOT  &trans              &trans        &trans
     >;
 };
