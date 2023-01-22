@@ -50,25 +50,12 @@
             key-positions = <1 2>;
             bindings = <&sk LGUI>;
         };
-        combo_fp_shift {
-            layers = <NORMAL_LAYERS>;
-            timeout-ms = <50>;
-            key-positions = <2 3>;
-            bindings = <&sk LSHFT>;
-        };
-        combo_xc_ctrl {
+        combo_xc_alt {
             layers = <NORMAL_LAYERS>;
             timeout-ms = <50>;
             key-positions = <21 22>;
-            bindings = <&sk LCTL>;
-        };
-        combo_cd_alt {
-            layers = <NORMAL_LAYERS>;
-            timeout-ms = <50>;
-            key-positions = <22 23>;
             bindings = <&sk LALT>;
         };
-
 
         combo_gm_capsword {
             layers = <NORMAL_LAYERS>;
@@ -95,18 +82,11 @@
             bindings = <&kp BSPC>;
         };
 
-
-        combo_lu_shift {
-            layers = <NORMAL_LAYERS>;
-            timeout-ms = <50>;
-            key-positions = <6 7>;
-            bindings = <&sk RSHFT>;
-        };
-        combo_uy_gui {
+        combo_uy_shift {
             layers = <NORMAL_LAYERS>;
             timeout-ms = <50>;
             key-positions = <7 8>;
-            bindings = <&sk RGUI>;
+            bindings = <&sk RSHFT>;
         };
         combo_comma_dot_ctrl {
             layers = <NORMAL_LAYERS>;
@@ -114,12 +94,7 @@
             key-positions = <27 28>;
             bindings = <&sk RCTRL>;
         };
-        combo_h_comma_alt {
-            layers = <NORMAL_LAYERS>;
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            bindings = <&sk RALT>;
-        };
+
 
         combo_lock {
             timeout-ms = <50>;
