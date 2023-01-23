@@ -50,12 +50,19 @@
             key-positions = <1 2>;
             bindings = <&sk LSHFT>;
         };
-        combo_xc_alt {
+        combo_xc_win {
             layers = <NORMAL_LAYERS>;
             timeout-ms = <50>;
             key-positions = <21 22>;
+            bindings = <&sk LGUI>;
+        };
+        combo_cd_lalt {
+            layers = <NORMAL_LAYERS>;
+            timeout-ms = <50>;
+            key-positions = <22 23>;
             bindings = <&sk LALT>;
         };
+
 
         combo_gm_capsword {
             layers = <NORMAL_LAYERS>;
@@ -88,13 +95,18 @@
             key-positions = <7 8>;
             bindings = <&sk RSHFT>;
         };
-        combo_comma_dot_ctrl {
+        combo_comma_dot_gui {
             layers = <NORMAL_LAYERS>;
             timeout-ms = <50>;
             key-positions = <27 28>;
+            bindings = <&sk RGUI>;
+        };
+        combo_h_comma_ctrl {
+            layers = <NORMAL_LAYERS>;
+            timeout-ms = <50>;
+            key-positions = <26 27>;
             bindings = <&sk RCTRL>;
         };
-
 
         combo_lock {
             timeout-ms = <50>;
@@ -127,8 +139,8 @@ colemak_layer {
 symbol_layer {                
     bindings = <
         &kp EXCL    &kp AT      &kp HASH    &kp DOLLAR  &kp PRCNT       &kp CARET   &kp AMPS    &kp LBRC    &kp RBRC    &kp DQT
-        &sk LCTRL   &sk LALT    &sk LGUI    &sk LSHFT   &kp BSLH        &kp FSLH    &kp PIPE    &kp LPAR 	&kp RPAR    &kp GRAVE
-        &sv_ae 	    &sv_ao 		&sv_oe      &kp LT      &kp GT          &kp UNDER   &kp EQUAL   &kp LBKT    &kp RBKT    &kp COLON
+        &sk LCTRL   &sk LALT    &sk LGUI    &sk LSHFT   &kp BSLH        &kp FSLH    &kp PIPE    &kp LPAR 	&kp RPAR    &kp QMARK
+        &sv_ae 	    &sv_ao 		&sv_oe      &kp LBKT    &kp RBKT        &kp UNDER   &kp EQUAL   &kp LT      &kp GT      &kp COLON
                                             &trans   	&trans 	        &trans      &trans
     >;
 };
@@ -137,7 +149,7 @@ number_layer {
     bindings = <
         &kp GRAVE  &kp N7  &kp N8  &kp N9 	&kp STAR 		    &kp CARET 	  &kp TILDE   &kp EXCL   &kp AT    &kp HASH
         &kp AT     &kp N4  &kp N5  &kp N6   &kp PLUS 		    &kp MINUS     &sk RSHIFT  &sk RGUI   &sk RALT  &sk RCTRL
-        &kp N0     &kp N1  &kp N2  &kp N3 	&kp FSLH 		    &kp COLON 	  &kp EQUAL   &kp LT  	 &kp GT    &kp PRCNT
+        &kp N0     &kp N1  &kp N2  &kp N3 	&kp FSLH 		    &kp PRCNT 	  &kp EQUAL   &kp LT  	 &kp GT    &kp COLON
                                    &kp DOT  &trans              &trans        &trans
     >;
 };
