@@ -39,6 +39,17 @@
             release-after-ms = <1000>;
             quick-release;
         };
+
+        gqt: global-quick-tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GLOBAL_QUICK_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     combos {
@@ -130,7 +141,7 @@ compatible = "zmk,keymap";
 colemak_layer {
     bindings = <
         &kp Q 	&kp W 	&kp F 	&kp P 	&kp B 		&kp J 	&kp L   &kp U     &kp Y   	&kp APOS
-        &kp A 	&kp R 	&kp S 	&kp T 	&kp G 		&kp M 	&kp N   &kp E     &kp I   	&kp O
+        &gqt LCTRL A 	&gqt LALT R 	&gqt LGUI S 	&gqt LSHFT T 	&kp G 		&kp M 	&gqt RSHFT N   &gqt RGUI E     &gqt RALT I   	&gqt RCTRL O
         &kp Z 	&kp X 	&kp C 	&kp D 	&kp V 		&kp K 	&kp H   &kp COMMA &kp DOT 	&kp SEMI
                                 &lt NAV TAB &lt SYM SPACE 	    &lt FUN RET   &lt NUM BSPC
     >;
