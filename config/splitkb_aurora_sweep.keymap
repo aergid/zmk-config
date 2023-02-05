@@ -52,6 +52,17 @@
         };
     };
 
+    macros {
+        language_switch: language_switch {
+            label = "ZM_language_switch";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &tog QWE &kp LC(SPACE)>
+                ;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
         
@@ -119,6 +130,11 @@
             bindings = <&sk RCTRL>;
         };
 
+        combo_lang {
+            timeout-ms = <50>;
+            key-positions = <20 29>;
+            bindings = <&language_switch>;            
+        }
         combo_lock {
             timeout-ms = <50>;
             key-positions = <20 29 30 33>;
@@ -180,6 +196,15 @@ fun_layer {
         &kp CAPS &kp F4  &kp F5   &kp F6 	&kp F11 		&kp MINUS     &sk RSHIFT    &sk RGUI      &sk RALT      &sk RCTRL   
         &none 	 &kp F1  &kp F2	  &kp F3 	&kp F12 		&none         &none         &none         &ext_power EP_ON &ext_power EP_OFF
                                   &trans 	&trans 	        &trans        &trans
+    >;
+};
+
+qwe_layer {
+    bindings = <
+        &kp Q 	&kp W 	&kp E 	&kp R 	&kp T 		&kp Y 	&kp U  &kp I     &kp O   	&kp P
+        &gqt LCTRL A 	&gqt LALT S 	&gqt LGUI D 	&gqt LSHFT F 	&kp G 		&kp H 	&gqt RSHFT J   &gqt RGUI K     &gqt RALT L   	&gqt RCTRL SEMI
+        &kp Z 	&kp X 	&kp C 	&kp V 	&kp B 		&kp N 	&kp M   &kp COMMA &kp DOT 	&kp FSLH
+                                &lt NAV TAB &lt SYM SPACE 	    &lt FUN RET   &lt NUM BSPC
     >;
 };
 
