@@ -167,9 +167,9 @@ number_layer {
 
 nav_layer {
     bindings = <
-        &kp C_PLAY 	    &kp C_PAUSE      &kp C_PREV       &kp C_NEXT      &kp C_VOL_UP       &kp LC(A)     &kp END   &kp HOME   &kp LC(E)     &none
+        &kp C_PLAY 	    &kp C_PAUSE      &kp C_PREV       &kp C_NEXT      &kp C_VOL_UP       &kp LC(A)     &kp HOME  &kp END    &kp LC(E)     &none
         &sk LCTRL       &sk LALT         &sk LGUI         &sk LSHFT       &kp C_VOL_DN       &kp LEFT      &kp DOWN  &kp UP     &kp RIGHT     &none
-        &rgb_ug RGB_TOG &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD &kp K_MUTE 	     &kp LC(PG_DN) &kp PG_DN &kp PG_UP  &kp LC(PG_UP) &kp PSCRN
+        &rgb_ug RGB_TOG &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD &kp K_MUTE 	     &kp LC(PG_UP) &kp PG_DN &kp PG_UP  &kp LC(PG_DN) &kp PSCRN
                                                           &trans          &trans 		     &trans        &trans
     >;
 };
