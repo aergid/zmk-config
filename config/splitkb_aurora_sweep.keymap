@@ -164,22 +164,21 @@ colemak_layer {
     >;
 };
 
-symbol_layer {                
-    bindings = <
-        &kp EXCL    &kp AT      &kp HASH    &kp DOLLAR  &kp PRCNT       &kp CARET   &kp AMPS    &kp LBKT    &kp RBKT    &kp DQT
-        &sk LCTRL   &sk LALT    &sk LGUI    &sk LSHFT   &kp BSLH        &kp FSLH    &kp PIPE    &kp LPAR 	&kp RPAR    &kp QMARK
-        &sv_ae 	    &sv_ao 		&sv_oe      &kp LBRC    &kp RBRC        &kp UNDER   &kp EQUAL   &kp LT      &kp GT      &kp COLON
-                                            &trans   	&trans 	        &trans      &trans
-    >;
-};
-
-
 qwe_layer {
     bindings = <
         &kp Q 	&kp W 	&kp E 	&kp R 	&kp T 		&kp Y 	&kp U  &kp I     &kp O   	&kp P
         &gqt LCTRL A 	&gqt LALT S 	&gqt LGUI D 	&gqt LSHFT F 	&kp G 		&kp H 	&gqt RSHFT J   &gqt RGUI K     &gqt RALT L   	&gqt RCTRL SEMI
         &kp Z 	&kp X 	&kp C 	&kp V 	&kp B 		&kp N 	&kp M   &kp COMMA &kp DOT 	&kp FSLH
                                 &lt NAV TAB &lt SYM SPACE 	    &lt FUN RET   &lt NUM BSPC
+    >;
+};
+
+symbol_layer {                
+    bindings = <
+        &kp EXCL    &kp AT      &kp HASH    &kp DOLLAR  &kp PRCNT       &kp CARET   &kp AMPS    &kp LBKT    &kp RBKT    &kp DQT
+        &sk LCTRL   &sk LALT    &sk LGUI    &sk LSHFT   &kp BSLH        &kp FSLH    &kp PIPE    &kp LPAR 	&kp RPAR    &kp QMARK
+        &sv_ae 	    &sv_ao 		&sv_oe      &kp LBRC    &kp RBRC        &kp UNDER   &kp EQUAL   &kp LT      &kp GT      &kp COLON
+                                            &trans   	&trans 	        &trans      &trans
     >;
 };
 
