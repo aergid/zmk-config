@@ -173,6 +173,16 @@ symbol_layer {
     >;
 };
 
+
+qwe_layer {
+    bindings = <
+        &kp Q 	&kp W 	&kp E 	&kp R 	&kp T 		&kp Y 	&kp U  &kp I     &kp O   	&kp P
+        &gqt LCTRL A 	&gqt LALT S 	&gqt LGUI D 	&gqt LSHFT F 	&kp G 		&kp H 	&gqt RSHFT J   &gqt RGUI K     &gqt RALT L   	&gqt RCTRL SEMI
+        &kp Z 	&kp X 	&kp C 	&kp V 	&kp B 		&kp N 	&kp M   &kp COMMA &kp DOT 	&kp FSLH
+                                &lt NAV TAB &lt SYM SPACE 	    &lt FUN RET   &lt NUM BSPC
+    >;
+};
+
 number_layer {
     bindings = <
         &kp GRAVE  &kp N7  &kp N8  &kp N9 	&kp STAR 		    &kp CARET 	  &kp TILDE   &kp EXCL   &kp AT    &kp HASH
@@ -200,14 +210,6 @@ fun_layer {
     >;
 };
 
-qwe_layer {
-    bindings = <
-        &kp Q 	&kp W 	&kp E 	&kp R 	&kp T 		&kp Y 	&kp U  &kp I     &kp O   	&kp P
-        &gqt LCTRL A 	&gqt LALT S 	&gqt LGUI D 	&gqt LSHFT F 	&kp G 		&kp H 	&gqt RSHFT J   &gqt RGUI K     &gqt RALT L   	&gqt RCTRL SEMI
-        &kp Z 	&kp X 	&kp C 	&kp V 	&kp B 		&kp N 	&kp M   &kp COMMA &kp DOT 	&kp FSLH
-                                &lt NAV TAB &lt SYM SPACE 	    &lt FUN RET   &lt NUM BSPC
-    >;
-};
 
 lock_layer {
 // only way out is the lock combo
