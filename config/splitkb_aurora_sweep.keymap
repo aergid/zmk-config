@@ -166,9 +166,9 @@ colemak_layer {
 
 symbol_layer {                
     bindings = <
-        &kp EXCL    &kp AT      &kp HASH    &kp DOLLAR  &kp PRCNT       &kp CARET   &kp AMPS    &kp LBRC    &kp RBRC    &kp DQT
+        &kp EXCL    &kp AT      &kp HASH    &kp DOLLAR  &kp PRCNT       &kp CARET   &kp AMPS    &kp LBKT    &kp RBKT    &kp DQT
         &sk LCTRL   &sk LALT    &sk LGUI    &sk LSHFT   &kp BSLH        &kp FSLH    &kp PIPE    &kp LPAR 	&kp RPAR    &kp QMARK
-        &sv_ae 	    &sv_ao 		&sv_oe      &kp LBKT    &kp RBKT        &kp UNDER   &kp EQUAL   &kp LT      &kp GT      &kp COLON
+        &sv_ae 	    &sv_ao 		&sv_oe      &kp LBRC    &kp RBRC        &kp UNDER   &kp EQUAL   &kp LT      &kp GT      &kp COLON
                                             &trans   	&trans 	        &trans      &trans
     >;
 };
