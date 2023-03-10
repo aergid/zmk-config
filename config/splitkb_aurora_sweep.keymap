@@ -70,7 +70,7 @@
             layers = <NORMAL_LAYERS>;
             timeout-ms = <50>;
             key-positions = <1 2>;
-            bindings = <&sk ESC>;
+            bindings = <&kp ESC>;
         };
         combo_xc_win {
             layers = <NORMAL_LAYERS>;
